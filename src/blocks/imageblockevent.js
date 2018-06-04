@@ -19,9 +19,9 @@ const Imageblockevent = ( page ) => {
 	const HeadingTag = `h${ page.level }`;
 
 	return (
-		<div className={`imageblock imageblockevent imageblock--${ theme } ${ reverse } uikit-body uikit-grid`}>
+		<div className={`imageblock imageblockevent imageblock--${ theme } ${ reverse } au-body au-grid`}>
 			<div className="imageblock__image" style={{ backgroundImage }}>
-				<div className="container">
+				<div className="container-fluid">
 					<div className="row">
 						<div className={`imageblock__content imageblock__content--${ theme }`}>
 

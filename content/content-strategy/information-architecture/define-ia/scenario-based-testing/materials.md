@@ -1,0 +1,2 @@
+- access to computers (laptops or desktops)
+- internet access

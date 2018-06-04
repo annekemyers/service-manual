@@ -1,0 +1,93 @@
+// from govau/designsystem
+
+
+// .au-display-xxxl, .au-display-xxl, .au-display-xl, .au-display-lg, .au-display-md, .au-display-sm, .au-display-xs, .au-body h1, .au-body h2, .au-body h3, .au-body h4, .au-body h5, .au-body h6 {
+// 	font-weight: normal;
+// }
+
+.au-display-sm.feature__wrapper__headline {
+	font-weight: bold;
+}
+
+.au-btn, a.au-btn {
+	border-width: 2px;
+}
+
+.au-body *+h2, .au-body *+.au-display-xl {
+	@include AU-space( margin-top, 5unit );
+}
+
+.au-body :target {
+	outline: none;
+	animation: example 2s;
+}
+
+@keyframes example {
+	from {
+		background-color: $AU-color-background-shade;
+	}
+
+	to {
+		background-color: $AU-color-background;
+	}
+}
+
+//////////////////////////////////////////////
+///
+///      Guides specific overrides
+///
+//////////////////////////////////////////////
+
+// hack to remove the vanilla focus from elements
+[tabindex="-1"] {
+	outline: none;
+}
+
+// give images inside links focus
+a:focus img {
+	outline: 3px solid $AU-color-foreground-focus;
+}
+
+a:focus h1 {
+	outline: 3px solid $AU-color-foreground-focus;
+}
+
+
+// reduce the list item margin in mobile view
+.textwrapper li {
+	position: relative;
+	left: -1rem;
+
+	@include AU-media( xs ) {
+		left: 0rem;
+	}
+}
+
+// fine tune the headings at different breakpoints
+.au-body .au-display-xxxl, .au-display-xxxl{
+	font-size: 2.6rem;
+	letter-spacing: -0.03rem;
+	line-height: normal;
+	@include AU-media( xs ) {
+		font-size: 3.3rem;
+	}
+}
+
+// fade in the main menu hover colour
+.navigation.navigation--dark .au-link-list>li>a {
+	transition: color 0.1s ease-in-out;
+}
+
+// override DL tags default left border
+.au-body dl:not([class])>dd {
+	margin-left: 0;
+	padding-left: 0;
+	border: none;
+	font-weight: 300;
+}
+
+.spacer__med {
+	@include AU-media( md ) {
+		margin-bottom: 3rem;
+	}
+}

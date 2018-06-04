@@ -1,0 +1,66 @@
+.topic-takeaway-list {
+	margin-top: 1.5rem;
+}
+
+.topic-takeaway-list ul {
+	list-style:none;
+	padding-left: 1em;
+	position: relative;
+	left: -10px;
+}
+
+.topic-takeaway-list ul li {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		background-image: url('/assets/img/governing-content/tick.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-right:0.5em;
+	}
+}
+
+.topic-takeaway-previous-card {
+	margin-top: 0.5rem;
+}
+
+.topic-takeaway-next-card {
+	text-align: right;
+	margin-top: 0.5rem;
+}
+
+.topic-takeaway-output {
+	margin-left: -8px;
+	margin-bottom: 1.2rem;
+}
+
+.topic-takeaway-container {
+	margin-top: 2rem;
+}
+
+.topic-takeaway-card-content {
+	background-color: #f7f7f7;
+	padding-top: 28px;
+	padding-left: 24px;
+	padding-right: 16px;
+	padding-bottom: 24px;
+}
+
+.topic-takeaway-paginator {
+	margin-top: 20px;
+	//margin-bottom: 40px;
+	font-size: 90%;
+}
+
+.topic-takeaway-paginator a, .topic-takeaway-arrows {
+	color: #007099;
+}
+
+.topic-takeaway-gray {
+	color: $AU-color-foreground-border;
+	position: relative;
+	top: -14px;
+	font-weight: lighter;
+}

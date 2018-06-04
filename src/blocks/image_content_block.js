@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import Slugify from 'slugify';
 
 /**
@@ -22,8 +21,7 @@ const ImageContentblock = ( page ) => {
 
 	const Content = (
 		<div className={`imagecontentblock__content imagecontentblock__content--${ theme } `}>
-			{ page.section && <span className="section__section intro__category" id={ Slugify( page.section ).toLowerCase() } >{ page.section }</span> }
-			<div className="textwrapper">
+			<div className="textwrapper imagecontentblock__headline__wrapper">
 				{ page.title && <HeadingTag id={ id } className={ `imagecontentblock__headline display-${ page.display }` }>
 					{ page.title }
 				</HeadingTag>
@@ -34,30 +32,35 @@ const ImageContentblock = ( page ) => {
 	);
 
 	const Figure = (
-		<figure className="imagecontentblock__image">
-			{ imageLink === undefined
-				? ( <img className="imagecontentblock__image__img" src={ imageSrc } alt={ page.imageAlt } /> )
-				: ( <a href={ imageLink }><img className="imagecontentblock__image__img" src={ imageSrc } alt={ page.imageAlt } /></a> )
-			}
-			{ page.caption && <figcaption className="imagecontentblock__image__caption">{ page.caption }</figcaption> }
-		</figure>
+		<div>
+			<figure className="imagecontentblock__image">
+				{ imageLink === undefined
+					? ( <img className="imagecontentblock__image__img" src={ imageSrc } alt={ page.imageAlt } /> )
+					: ( <a href={ imageLink }><img className="imagecontentblock__image__img" src={ imageSrc } alt={ page.imageAlt } /></a> )
+				}
+				{ page.caption && <figcaption className="imagecontentblock__image__caption">{ page.caption }</figcaption> }
+			</figure>
+
+			{ page.long_description }
+		</div>
 	);
 
 	return (
-		<div className={`imagecontentblock imagecontentblock--${ theme } ${ page.stackPosition ? 'imagecontentblock--stack' + page.stackPosition : '' }   uikit-body uikit-grid`}>
-			<div className="container">
+		<div className={`imagecontentblock imagecontentblock--${ theme } ${ page.stackPosition ? 'imagecontentblock--stack' + page.stackPosition : '' }   au-body au-grid`}>
+			<div className="container-fluid">
 				<div className="row">
-					<div className="col-md-6">
+					<div className="col-md-offset-3 col-md-4">
 						{ page.reverse
 							? Figure
 							: Content
 						}
 					</div>
-					<div className="col-md-6">
+					<div className="col-md-5">
 						{ page.reverse
 							? Content
 							: Figure
 						}
+
 					</div>
 				</div>
 			</div>

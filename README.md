@@ -11,7 +11,7 @@
 
 ## Staging
 
-- **url**: [https://service-manual.apps.staging.digital.gov.au/](https://service-manual.apps.staging.digital.gov.au/)
+- **url**: [https://service-manual.apps.y.cld.gov.au/](https://service-manual.apps.y.cld.gov.au/)
 - **branch**: `develop`
 - **status**:  [![CircleCI](https://circleci.com/gh/govau/service-manual/tree/develop.svg?style=svg)](https://circleci.com/gh/govau/service-manual/tree/develop)
 
@@ -23,19 +23,19 @@
 **Install dependencies**
 
 ```shell
-yarn
+npm install
 ```
 
 **Build the static assets**
 
 ```shell
-yarn build
+npm run build
 ```
 
 **Start the development server**
 
 ```shell
-yarn watch
+npm run watch
 ```
 
 

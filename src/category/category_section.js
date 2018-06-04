@@ -11,12 +11,12 @@ const CategorySection = ( page ) => {
 	const Heading = `h${ page.level }`;
 
 	return (
-		<div className="uikit-body uikit-grid category-section">
-			<div className="container">
+		<div className="au-body au-grid category-section">
+			<div className="container-fluid">
 				<div className="row">
-					<div className="col-md-12" id={ Slugify( page.section ).toLowerCase() }>
-						<span className="section__section category-section__section">{ page.section }</span>
-						<Heading className="category-section__headline display-3">{ page.title }</Heading>
+					<div className="col-md-offset-3 col-md-6" id={ Slugify( page.section ).toLowerCase() }>
+						<div><Heading className="category-section__headline display-3">{ page.title }</Heading></div>
+						<p/>
 					</div>
 				</div>
 			</div>

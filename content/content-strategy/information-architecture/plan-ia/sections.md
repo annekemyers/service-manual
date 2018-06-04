@@ -1,7 +1,7 @@
 ---
 layout: nav/sections
 sections:
-  - Identify user needs
-  - List special content requirements
-  - List business requirements
+  - Build out your taxonomy
+  - Group content
+  - Visualise your IA
 ---
